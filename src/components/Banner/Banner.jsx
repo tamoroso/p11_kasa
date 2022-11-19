@@ -1,10 +1,18 @@
 import React from "react";
+import styles from "./Banner.module.css";
 
-const Banner = () => {
+const Banner = ({ backgroundImageSrc, tagline = undefined }) => {
   return (
-    <div>
-      <img src="../../assets/images/Background.png" alt="background" />
-      <p>Chez vous, partout et ailleurs</p>
+    <div
+      className={styles.banner}
+      style={{
+        background: `url(${backgroundImageSrc})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      {tagline && <h1>{tagline}</h1>}
     </div>
   );
 };

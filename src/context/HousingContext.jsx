@@ -16,10 +16,6 @@ const HousingContextProvider = ({ children }) => {
     fetchHousingData();
   }, []);
 
-  useEffect(() => {
-    console.log(housingData);
-  }, [housingData]);
-
   return (
     <HousingContext.Provider value={housingData}>
       {children}

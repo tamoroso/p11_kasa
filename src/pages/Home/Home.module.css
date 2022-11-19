@@ -1,0 +1,12 @@
+.thumb_wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  gap: 60px;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  padding: 3.5rem 0px 3.5rem 0px;
+  align-items: center;
+  justify-content: center;
+}

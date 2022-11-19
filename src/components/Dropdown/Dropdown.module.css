@@ -1,0 +1,38 @@
+.dropdown_wrapper {
+  margin: 0rem 8rem;
+}
+
+.dropdown_wrapper button {
+  width: 100%;
+  background-color: #ff6060;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.dropdown_open {
+  transform: rotate(180deg);
+}
+
+.dropdown_wrapper button svg {
+  transition: transform 300ms ease-in-out;
+}
+
+.dropdown_wrapper div {
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.dropdown_wrapper p {
+  margin: 0;
+  font-size: 24px;
+  color: #ff6060;
+}

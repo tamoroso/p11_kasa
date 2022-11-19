@@ -12,36 +12,14 @@ const AppRouter = () => {
     <Suspense fallback={null}>
       <HousingContextProvider>
         <Router>
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <Layout>
-                  <Home />
-                </Layout>
-              }
-            ></Route>
-            <Route
-              exact
-              path="/housing/:id"
-              element={
-                <Layout>
-                  <Housing />
-                </Layout>
-              }
-            ></Route>
-            <Route
-              exact
-              path="/about"
-              element={
-                <Layout>
-                  <About />
-                </Layout>
-              }
-            ></Route>
-            <Route path="*" element={<Error />}></Route>
-          </Routes>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Home />}></Route>
+              <Route exact path="/housing/:id" element={<Housing />}></Route>
+              <Route exact path="/about" element={<About />}></Route>
+              <Route path="*" element={<Error />}></Route>
+            </Routes>
+          </Layout>
         </Router>
       </HousingContextProvider>
     </Suspense>

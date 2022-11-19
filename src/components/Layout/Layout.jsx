@@ -1,17 +1,17 @@
 import React from "react";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import { useLocation } from "react-router-dom";
+import styles from "./Layout.module.css";
 
 const Layout = (props) => {
-  let location = useLocation(); //Use to handle active state on navigation
-
   return (
-    <>
-      <Header />
-      {props.children}
+    <div className={styles.main_content_wrapper}>
+      <div className={styles.main_content}>
+        <Header />
+        {props.children}
+      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

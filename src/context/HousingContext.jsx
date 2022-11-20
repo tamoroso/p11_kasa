@@ -7,10 +7,10 @@ const HousingContextProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchHousingData = () => {
-      fetch("./data/housing_data.json")
+      fetch("/data/housing_data.json")
         .then((response) => response.json())
         .then((result) => setHousingData(result))
-        .catch((error) => console.log(`An error occured : ${error}`));
+        .catch((error) => console.error(`An error occured : ${error}`));
     };
 
     fetchHousingData();

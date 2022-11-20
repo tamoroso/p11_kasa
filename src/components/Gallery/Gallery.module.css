@@ -1,0 +1,50 @@
+.gallery_container {
+  height: 415px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.gallery_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.previous,
+.next {
+  width: 47px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+.previous {
+  transform: rotate(90deg) translateX(-50%);
+  left: 0;
+  top: 50%;
+}
+
+.next {
+  transform: rotate(-90deg) translateX(50%);
+  right: 0;
+  top: 50%;
+}
+
+.previous path,
+.next path {
+  fill: white;
+}
+
+.slides_count {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+  color: white;
+  padding: 1rem;
+}

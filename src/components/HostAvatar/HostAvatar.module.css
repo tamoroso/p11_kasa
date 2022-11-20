@@ -1,0 +1,23 @@
+.host_avatar_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.host_avatar_wrapper span {
+  text-align: right;
+  line-height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.host_avatar_wrapper img {
+  border-radius: 50%;
+  width: 64px;
+}
+
+.host_avatar_wrapper div {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: #c4c4c4;
+}

@@ -1,26 +1,63 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { Gallery, HostAvatar, Rating, Tag } from "../../components";
+import { Dropdown, Gallery, HostAvatar, Rating, Tag } from "../../components";
 import { HousingContext } from "../../context/HousingContext";
+import styles from "./Housing.module.css";
 
 const Housing = () => {
   const { id } = useParams();
   const housingData = useContext(HousingContext);
 
-  const Poc = housingData[0];
+  const currentHousing = useMemo(() => {
+    if (housingData) {
+      return housingData[housingData.findIndex((item) => item?.id === id)];
+    }
+  }, [housingData, id]);
 
-  const host = {
-    name: "Bobcat Pipo",
-    picture: "",
-  };
+  const dropdownsData = [
+    {
+      label: "Description",
+      content: currentHousing?.description,
+    },
+    {
+      label: `Équipements`,
+      content: () =>
+        currentHousing?.equipments.map((element, index) => (
+          <p key={element + index}>{element}</p>
+        )),
+    },
+  ];
 
   return (
     <>
-      <h1>Housing {id}</h1>
-      <Tag tagLabel={"pipo"} />
-      <Rating score={"4"} />
-      <HostAvatar host={Poc.host} />
-      <Gallery pictures={Poc.pictures} />
+      {currentHousing && (
+        <>
+          <Gallery pictures={currentHousing?.pictures} />
+          <div className={styles.housing_infos}>
+            <div>
+              <h1>{currentHousing?.title}</h1>
+              <p>{currentHousing?.location}</p>
+              <div className={styles.tags}>
+                {currentHousing?.tags.map((tag, index) => (
+                  <Tag key={tag + index} tagLabel={tag} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <HostAvatar host={currentHousing?.host} />
+              <Rating score={currentHousing?.rating} />
+            </div>
+          </div>
+          <div className={styles.housing_description}>
+            {dropdownsData.map((dropdownData, index) => (
+              <Dropdown
+                key={dropdownData.label + index}
+                dropdownData={dropdownData}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 };

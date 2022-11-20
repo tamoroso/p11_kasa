@@ -18,7 +18,7 @@ const Dropdown = ({ dropdownData }) => {
       </button>
       {open ? (
         <div>
-          <p>{content}</p>
+          {typeof content === "function" ? content() : <p>{content}</p>}
         </div>
       ) : null}
     </div>

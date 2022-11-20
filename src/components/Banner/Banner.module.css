@@ -6,7 +6,7 @@
   border-radius: 25px;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .banner::after {

@@ -14,7 +14,7 @@ const Rating = ({ score }) => {
   }
 
   return (
-    <div>
+    <div className={styles.rating_wrapper}>
       {isNaN(scoreNumber) || scoreNumber > maxScore ? (
         <span>Aucune note</span>
       ) : (

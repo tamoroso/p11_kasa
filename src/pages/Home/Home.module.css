@@ -10,3 +10,17 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 769px) {
+  .thumb_wrapper {
+    gap: 30px;
+    background-color: unset;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .thumb_wrapper {
+    gap: 20px;
+  }
+}

@@ -25,10 +25,62 @@
   display: flex;
   gap: 10px;
   margin-top: 1.8rem;
+  flex-flow: wrap;
 }
 
 h1,
 p {
   color: #ff6060;
   margin: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .housing_infos {
+    flex-direction: column;
+  }
+
+  .housing_infos > div:last-child {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .housing_infos > div:first-child {
+    width: 100%;
+  }
+
+  .housing_description {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  h1 {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .housing_infos {
+    margin-top: 0.8rem;
+  }
+
+  .tags {
+    margin-top: 1rem;
+  }
+
+  .housing_infos > div:last-child {
+    margin-top: 0.5rem;
+  }
+
+  .housing_description {
+    margin-top: 0.9rem;
+  }
 }

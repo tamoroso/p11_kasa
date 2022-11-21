@@ -11,3 +11,13 @@
 .active path {
   fill: #ff6060;
 }
+
+@media screen and (max-width: 426px) {
+  .rating_wrapper {
+    gap: 5px;
+  }
+
+  .rating_wrapper svg {
+    width: 15px;
+  }
+}

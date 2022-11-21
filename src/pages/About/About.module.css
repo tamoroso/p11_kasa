@@ -4,3 +4,13 @@
   flex-direction: column;
   gap: 33px;
 }
+
+@media screen and (max-width: 769px) {
+  .about_dropdown_container {
+    gap: 20px;
+  }
+
+  .about_dropdown_container div {
+    margin: unset;
+  }
+}

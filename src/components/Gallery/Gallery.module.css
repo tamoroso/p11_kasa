@@ -48,3 +48,14 @@
   color: white;
   padding: 1rem;
 }
+
+@media screen and (max-width: 426px) {
+  .gallery_container {
+    height: 225px;
+  }
+
+  .previous,
+  .next {
+    width: 19px;
+  }
+}

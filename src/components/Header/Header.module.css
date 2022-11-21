@@ -4,3 +4,13 @@
   justify-content: space-between;
   margin-bottom: 2.5rem;
 }
+
+@media screen and (max-width: 426px) {
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  .header svg {
+    width: 150px;
+  }
+}

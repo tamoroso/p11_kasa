@@ -24,3 +24,14 @@
   height: 64px;
   background-color: #c4c4c4;
 }
+
+@media screen and (max-width: 426px) {
+  .host_avatar_wrapper img {
+    width: 32px;
+  }
+
+  .host_avatar_wrapper span {
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+  }
+}

@@ -28,3 +28,20 @@
   color: white;
   font-size: 3rem;
 }
+
+@media screen and (max-width: 426px) {
+  .banner {
+    height: 111px;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+  }
+
+  .banner::after {
+    border-radius: 10px;
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}

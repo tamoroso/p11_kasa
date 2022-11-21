@@ -36,3 +36,20 @@
   font-size: 24px;
   color: #ff6060;
 }
+
+@media screen and (max-width: 426px) {
+  .dropdown_wrapper button {
+    font-size: 0.8rem;
+  }
+
+  .dropdown_wrapper button svg {
+    width: 16px;
+  }
+
+  .dropdown_wrapper p {
+    font-size: 0.75rem;
+  }
+  .dropdown_wrapper div {
+    padding: 0.7rem;
+  }
+}

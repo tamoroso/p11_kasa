@@ -17,3 +17,15 @@
   color: #ff6060;
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 426px) {
+  .navigation_wrapper {
+    gap: 10px;
+  }
+
+  .navigation_wrapper li a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

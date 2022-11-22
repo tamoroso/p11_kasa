@@ -28,8 +28,8 @@
   flex-flow: wrap;
 }
 
-h1,
-p {
+.housing_infos > div h1,
+.housing_infos > div p {
   color: #ff6060;
   margin: 0;
 }
@@ -58,12 +58,12 @@ p {
 }
 
 @media screen and (max-width: 426px) {
-  h1 {
+  .housing_infos > div h1 {
     font-size: 1.1rem;
     line-height: 1.8rem;
   }
 
-  p {
+  .housing_infos > div p {
     font-size: 0.9rem;
     margin-top: 0.5rem;
   }

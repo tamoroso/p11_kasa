@@ -2,6 +2,7 @@ import React, { useContext, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { Dropdown, Gallery, HostAvatar, Rating, Tag } from "../../components";
 import { HousingContext } from "../../context/HousingContext";
+import Error from "../Error/Error";
 import styles from "./Housing.module.css";
 
 const Housing = () => {
@@ -30,7 +31,7 @@ const Housing = () => {
 
   return (
     <>
-      {currentHousing && (
+      {currentHousing ? (
         <>
           <Gallery pictures={currentHousing?.pictures} />
           <div className={styles.housing_infos}>
@@ -57,6 +58,8 @@ const Housing = () => {
             ))}
           </div>
         </>
+      ) : (
+        <Error />
       )}
     </>
   );

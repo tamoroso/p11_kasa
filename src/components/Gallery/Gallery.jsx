@@ -24,10 +24,13 @@ const Gallery = ({ pictures }) => {
 
   return (
     <div className={styles.gallery_container}>
-      <CaretDown
-        onClick={handleDisplayPreviousPicture}
-        className={styles.previous}
-      />
+      {picturesNumber === 1 ? null : (
+        <CaretDown
+          onClick={handleDisplayPreviousPicture}
+          className={styles.previous}
+        />
+      )}
+
       <img
         src={pictures[currentPictureIndex]}
         alt={`housing interior ${currentPictureIndex}`}
@@ -35,7 +38,9 @@ const Gallery = ({ pictures }) => {
       <span className={styles.slides_count}>
         {currentPictureIndex + 1}/{picturesNumber}
       </span>
-      <CaretDown onClick={handleDisplayNextPicture} className={styles.next} />
+      {picturesNumber === 1 ? null : (
+        <CaretDown onClick={handleDisplayNextPicture} className={styles.next} />
+      )}
     </div>
   );
 };
